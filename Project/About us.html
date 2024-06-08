@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0px 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="#service"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a class="active" href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a href="contact us.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+<div class="about-section">
+  <h1>About Us</h1>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Talha Mirza</h2>
+        <p class="title">Group Leader</p>
+        <p>Mirzatalha0705@gmail.com</p>
+        <p><button class="button"><a href ="contact us.html" style="color: white;text-decoration: none;">Contact</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Shafaat Khan</h2>
+        <p class="title">Group Member</p>
+        <p>Shafaatk2002@gmail.com</p>
+       <p><button class="button"><a href ="contact us.html"Style="color: white;text-decoration: none;">Contact</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2> Nachiket Nawatakke </h2>
+        <p class="title">Group Member </p>
+        <p>Nachiket@gmail.com</p>
+        <p><button class="button"><a href ="contact us.html" Style="color:white;text-decoration: none;">Contact</button></a>
+      </div>
+    </div>
+   </div>	 
+ 	
+<div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Rushikesh More</h2>
+        <p class="title">Group Member</p>
+        <p>Morerushikesh@gmail.com</p>
+        <p><button class="button"><a href ="contact us.html" Style="color: white;text-decoration: none;">Contact</button></a>
+      </div>
+    </div>
+  </div>
+ 
+
+</body>
+</html>

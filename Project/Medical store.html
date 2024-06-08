@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head> 
+	<script type="text/javascript" src="test.js"></script>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<title>Medicine Mangement Data</title>
+<style>
+
+
+   .button {
+           
+            font-size: 19px;
+}
+
+body{
+	background-image: url("data.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#box1, #box2, #box3, #box4 {
+	float:left;
+	color:#333333;
+	width:200px;
+	height:200px;
+	font-size:23px;
+}
+
+#box1 {
+	background-color:transparent;	
+}
+
+#box2 {
+	background-color:transparent;
+	padding-left:20px;
+}
+
+#box3 {
+	background-color:transparent;
+	padding-left:20px;
+}
+
+#box4 {
+	background-color:transparent;
+	padding-left:20px;
+}
+
+</style>
+
+
+<script Language="JavaScript">
+
+/*function validation()
+{
+	with(document.forms.register)
+ 	{
+	var MedId=document.getElementById('mid').value;
+	var mname=document.getElementById('mname').value;
+	var MName1=document.getElementById('mname1').value;
+	var MName2=document.getElementById('mname2').value;
+	
+
+	if(isNaN(MedId)){
+	alert("ID must be numeric only!");
+	return false;
+	}
+
+	if(/[a-zA-z0-9\-\/].test(mname)){
+	alert('Input is not alphanumeric');
+	return false;
+	}
+	
+	if(/[a-zA-z0-9\-\/].test(mname1)){
+	alert('Input is not alphanumeric');
+	return false;
+	}
+
+	if(/[a-zA-z0-9\-\/].test(mname2)){
+	alert('Input is not alphanumeric');
+	return false;
+	}
+
+	if(MedId.length!=6){
+	alert("ID must be 6 digits only!");
+	return false;
+	}
+}	
+}*/
+
+function view()
+{
+		with(document.forms.register)
+ 	{
+	document.register.action="http://localhost/Project/view_medicine.php";	
+	}
+
+}
+
+function search()
+{
+	with(document.forms.register)
+ 	{
+  document.register.action="http://localhost/Project/search_medicine.php";	
+	}
+
+}
+
+
+</script>
+
+</head>
+
+<body>
+<style>
+
+ul {
+  list-style-type: none;
+  margin: -10px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="service.html"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a href="contact us.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+
+<form name=register method="post">
+
+<h1>Medicine Management Data</h1>
+
+<div id="box1">Med Id :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="mid"  id="mid"  class="input"> 
+
+<p>Med Name :&nbsp&nbsp
+<input type="text" name="mname" id="mname" class="input"></p>
+
+<p>Price :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="price" id="price" class="input"></p>
+
+<p>Manfg. Date :<input type="text" name="mdate" id="mdate" class="input"></p>
+
+<p>Expiry Date :<input type="text" name="edate" id="edate" class="input">
+<br>
+<button input type="submit" value="Add Record" class="button" style=height:50px width: 50px" >Add Record</button></p></div>
+
+<div id="box2">Med Name: <input type="text" name="mname1" id="mname1" class="input">
+
+&nbsp&nbsp&nbsp&nbsp
+
+<p><input type="submit" value="Delete Record" class="button" style=height:50px width: 50px" ></p></div>
+
+<div id="box3">Med Name: <input type="text" name="mname2" id="mname2"   class="input">
+
+&nbsp&nbsp&nbsp&nbsp
+
+<p><input type="submit" value="Search Medicine" onclick="search()" class="button" style=height:50px width: 50px" ></p></div>
+
+<div id="box3">&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp
+<p><input type="submit" value="View Medicine Data" onclick="view()" class="button" style="height:50px width: 50px"></p>
+</div>
+
+</form>
+</body>
+</html>

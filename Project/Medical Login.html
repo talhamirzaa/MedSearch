@@ -1,0 +1,88 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<style>
+body{
+	background-image: url("med log.jpeg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+</style>
+
+<script Language="JavaScript">
+function check()
+{
+
+ with(document.forms.med_log)
+ {
+	if(b1.value!="" && b2.value!="")
+	{
+	 document.med_log.action="http://localhost/Project/med_login.php";
+	}
+	else
+	{
+	alert("Please enter above details");
+	document.med_log.action="Medical Login.html";
+	}
+  }
+}
+</script>
+</head>
+
+<body>
+
+<style>
+
+ul {
+  list-style-type: none;
+  margin: -10px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="service.html"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a href="contact us.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+<center>
+<form name=med_log method="post">
+<br><h2>Enter Email_id</h2><input type="text" name="b1" size="30" id="b1">
+<h2>Enter Password</h2><input type="password" name="b2" size="30" id="b2"><br>
+<br><input type="submit" value="Sign in" name="t3" id="b3" style="font-size:18px; height:40px;color:black" onclick="check()">
+<input type="reset"name="t4" id="b4" style="font-size:18px;height:40px;color:white; background-color:grey">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+body{
+	background-image: url("contact.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+label
+{
+	font-size:21px;
+
+}
+</style>
+
+<style>
+
+ul {
+  list-style-type: none;
+  margin: -10px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="service.html"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a class="active" href="contact us.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+<h1><center>Contact Us</center></h1>
+<form id="ContactUs100" method="post">
+<script type="text/javascript">
+function sub()
+{
+	//ValidateForm(this);
+	alert('your query has been submitted');
+	window.location.href='contact us.html';
+}
+function ValidateForm(frm) {
+if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+return true; }
+</script>
+<center>
+<table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
+<tr> <td>
+<label for="Name"><b>Name*:</b></label>
+</td> <td>
+<input name="Name" type="text" maxlength="60" style="width:100%;max-width:250px;" />
+</td> </tr> <tr> <td>
+<label for="PhoneNumber"><b>Phone </b>:</label>
+</td> <td>
+<input name="PhoneNumber" type="text" maxlength="43" style="width:100%;max-width:250px;" />
+</td> </tr> <tr> <td>
+<label for="FromEmailAddress"><b>Email address*:</b></label>
+</td> <td>
+<input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;max-width:250px;" />
+</td> </tr> <tr> <td>
+<label for="Comments"><b>Comments*:</b></label>
+</td> <td>
+<textarea name="Comments" rows="7" cols="40" style="width:100%;max-width:350px;"></textarea>
+</td> </tr> <tr> <td>
+</td> <td>
+<p style="color:red">* Required field</p>
+<input name="skip_Submit" type="submit" value="Submit" onclick="sub()"  style="font-size:18px;height:40px;width:90px;color:white; background-color:black " />
+</td> </tr>
+</center>
+</table>
+</form>
+</html>

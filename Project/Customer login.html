@@ -1,0 +1,142 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+
+<style>
+
+body
+{
+	background:url(clog_img1.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 9px;
+	background-size: 100% 100%;
+}
+
+</style>
+
+<script Language="JavaScript">
+var flag;
+function validate()
+{
+ with(document.forms.customer_log)
+ {
+	var val=ce1.value;
+	var index=val.indexOf( '@gmail.com');
+	if(index!=-1)
+	{
+	flag=1;
+	}
+	else
+	{
+	 alert("Please enter valid email id ");
+	}
+  }
+}
+
+
+	 
+function check()
+{
+ with(document.forms.customer_log)
+ { 
+	
+	if(ce1.value!="" && cp1.value!="")
+	{
+	 document.customer_log.action="http://localhost/Project/cust_login.php";
+	}
+	else
+	{
+	alert("Please enter above details");
+	document.customer_log.action="Customer login.html";
+	}
+  }
+}
+function btn_disable()
+{
+ with(document.forms.customer_log)
+ {
+	 if(flag==1)
+	{}
+	else
+	document.getElementById("b2").disabled=true;	
+  }
+}
+function btn_enable()
+{
+ with(document.forms.customer_log)
+ {
+	document.getElementById("b2").disabled=false;	
+  }
+}
+
+</script>
+</head> 
+<center>
+<body>
+
+<style>
+
+ul {
+  list-style-type: none;
+  margin: -10px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="#service"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+
+
+<form name=customer_log method="post">
+
+<br><br>
+<label style="font-size:31px">Sign In Here</label>
+<br><br><br><br>
+
+<br><label style="font-size:22px">Email-id:</label>
+&nbsp&nbsp&nbsp<input type="text" style="height:25px" placeholder="Enter your Gmail id" name="ce1" id="ce1" onclick="namecheck()">
+
+<br><br><label style="font-size:22px">Password:</label>
+&nbsp&nbsp&nbsp<input type="password" style="height:25px" name="cp1" id="cp1" onclick="validate()" onblur="btn_disable()">
+
+
+&nbsp&nbsp<br><br><input type="submit" value="Sign in" id="b2" style="font-size:18px; height:40px;color:black " onclick="check()">
+
+<input type="reset" value="Reset" onclick="btn_enable()" style="font-size:18px;height:40px;color:white; background-color:grey"">
+
+<br><a href="Customer register.html" style="text-decoration: none;"><label style="font-size:22px;">Didn't have an account?create one!</a></label>
+</form>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+
+<style>
+
+body
+{
+	background:url(creg_img.jpg);
+	background-repeat:no-repeat;
+	background-position: 300px 9px;
+	background-size: auto;
+}
+
+</style>
+
+<script Language="JavaScript">
+var flag;
+function validate()
+{
+ with(document.forms.customer_reg)
+ {
+	var val=t2.value;
+	var index=val.indexOf( '@gmail.com');
+	if(index!=-1)
+	{
+	flag=1;
+	}
+	else
+	{
+	 alert("Please enter valid email id ");
+	document.getElementById('gm').value=null;
+	}
+  }
+}
+function namecheck()
+{
+ with(document.forms.customer_reg)
+ {
+	 var nm=t1.value;
+	 re=/\d/
+	if(re.test(nm))
+	{
+		alert("Name cannot be a number");
+		document.getElementById('t1').value=null;	
+	}
+	else
+	{}
+  }
+}
+
+function phncheck()
+{
+ with(document.forms.customer_reg)
+ {
+	var ps=document.getElementById("pw").value.length;
+	if(ps<6)
+	{
+		alert("Password must have atleast 6 character long!");
+		document.getElementById('pw').value=null;
+	}
+	else
+		{}
+	var cnt=document.getElementById("pn3").value.length;
+	//alert(cnt);
+	var pn=t3.value;
+	 re=/\D/
+	if(re.test(pn))
+	{
+		alert("Phone Number cannot be a character");
+		document.getElementById('pn3').value=null;	
+	}
+	else
+	{
+		if(cnt!=10)
+	{
+		alert("Please enter proper mobile no. with exact 10 digits");
+		document.getElementById('pn3').value=null;
+	}
+	else
+		{}
+	}
+}
+}
+
+	 
+function check()
+{
+ with(document.forms.customer_reg)
+ {
+	
+	if(t1.value!="" && t2.value!="" && p1.value!="" && t3.value!="" && ch.checked!=0)
+	{
+	 alert("wait");
+	 document.customer_reg.action="http://localhost/Project/cust_reg.php";
+	}
+	else
+	{
+		alert("Please Enter all the Above Details.")
+	}
+
+  }
+}
+function btn_disable()
+{
+ with(document.forms.customer_reg)
+ {
+	 if(flag==1)
+	{}
+	else
+	document.getElementById("b2").disabled=true;	
+  }
+}
+function btn_enable()
+{
+ with(document.forms.customer_reg)
+ {
+	document.getElementById("b2").disabled=false;	
+  }
+}
+
+</script>
+</head> 
+<center>
+<body>
+
+<style>
+
+ul {
+  list-style-type: none;
+  margin: -10px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="#service"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a href="contact us.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+
+
+<form name=customer_reg method="post">
+
+<br>
+<label style="font-size:31px">Customer Registration</label>
+<br><br><br><br>
+<br><br><br><br>  
+<br><br>
+
+&emsp;&nbsp;<label style="font-size:25px">Name:</label>
+&nbsp&nbsp
+<input type="text" name="t1" style="height:25px" id="t1" placeholder="Enter your Name" onkeyup="namecheck()" onkeydown="namecheck()">
+
+<br><br><label style="font-size:22px">Email-id:</label>
+&nbsp&nbsp&nbsp<input type="text" style="height:25px" placeholder="Enter your Gmail id" name="t2" id="gm" onclick="namecheck()">
+
+<br><br><label style="font-size:22px">Password:</label>
+&nbsp&nbsp&nbsp<input type="password" style="height:25px" title="password must have 6 charater long!" name="p1" id="pw" onclick="validate()" >
+
+<br><br><label style="font-size:22px">Phone no. :</label>
+&nbsp&nbsp
+<input type="text" style="height:25px" placeholder="Enter your mobile number" name="t3" id="pn3" onblur="phncheck()">
+
+<br><input type="checkbox" name="ch"> *I have accepted all the terms and Privacy Policies of MedSearch.
+ 
+&nbsp&nbsp<br><br><input type="submit" value="Register Now" id="b2" style="font-size:18px;height:40px;color:white; background-color:black " onclick="check()">
+
+<input type="reset" value="Reset" onclick="btn_enable()" style="font-size:18px;height:40px;color:white; background-color:grey">
+</form>
+</body>
+</html>

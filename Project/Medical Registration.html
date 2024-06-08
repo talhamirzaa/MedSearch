@@ -1,0 +1,119 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<script type="text/javascript" src="Medical Registration.js"></script>
+	<link rel="stylesheet" type="text/css" href="Medical Registration.css">
+	<title>Medical Store Medical Registration</title>
+<style>
+body{
+	background-image: url("med reg.jpeg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+p{
+	font-size:22px;
+
+}	
+
+</style>
+
+</head>
+
+<body>
+
+<style>
+
+ul {
+  list-style-type: none;
+  margin: -10px -10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+
+</style>
+
+
+<ul>
+  <li><a href="#med"><i class="fa fa-plus-square" ></i> MedSearch</a></li>
+  <li><a href="Home_page.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+  <li><a href="service.html"><i class="fa fa-gears"></i>Our Service</a></li>
+  <li><a href="About us.html"><i class="fa fa-group"></i>About Us</a></li>
+  <li><a href="contact us.html"><i class="fa fa-fw fa-envelope"></i>Contact Us</a></li>
+  <li style="float:right"><a href="#login">Logout</a></li>
+</ul>
+
+
+
+<body>
+	<div style="margin: 0px 300px;">
+
+		<form name="register" onsubmit="fieldcheck()" method="post">
+				<h1>Medical Store Medical Registration</h1>
+			<p>
+				Enter your Name: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="fname"  id="fname"  class="input">
+			</p>
+
+			
+			<p>
+				Enter Medical Store Name: &nbsp<input type="text" name="mname" id="mname"   class="input">
+			</p>
+			
+			<p>
+				Enter Address: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+				&nbsp &nbsp<input type="text" name="lname" id="lname"></textarea>
+			</p>
+
+			<p>
+				Enter Email: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="email1" id="email1"  onblur="emailcheck()" class="input">
+			</p>
+
+			<p>
+				Enter Phone No.: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="phone" id="phone" maxlength="10"  onkeydown="return phnocheck(event)" class="input">
+			</p>
+			<p>
+			
+				Enter Password: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="password" name="pass1" maxlength="12" onblur="passcheck()" class="input">
+			</p>
+
+		
+&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp
+<a href="http://localhost/phpmyadmin/index.php?route=/table/import&db=dbtest&table=medical_5"><input type="button" value="Upload medicine data" style="font-size:18px;height:40px;color:black; background-color:skyblue " class="button"></a>
+			</p>
+
+			<p>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&emsp;&emsp;&emsp;&emsp;
+				<input type="submit" value="REGISTER" style="font-size:18px;height:40px;color:white; background-color:black " class="button">
+			
+				<input type="reset" value="Reset" style="font-size:18px;height:40px;color:white; background-color:grey" onclick="btn_enable()" >
+
+			</p>
+		</form>
+
+	</div>
+
+</body>
+</html>
